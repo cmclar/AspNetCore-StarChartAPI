@@ -69,7 +69,7 @@ namespace StarChart.Controllers
             var existingObject = _context.CelestialObjects.Find(id);
             if (existingObject == null)
                 return NotFound();
-            existingObject.Id = celestialObject.Id;
+            existingObject.Name = celestialObject.Name;
             existingObject.OrbitalPeriod = celestialObject.OrbitalPeriod;
             existingObject.OrbitedObjectId = celestialObject.OrbitedObjectId;
             _context.CelestialObjects.Update(existingObject);
